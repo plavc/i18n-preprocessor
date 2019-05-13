@@ -9,7 +9,7 @@
     "url": "https://github.com/plavc/i18n-preprocessor.git"
   },
   "author": "gregor@plavcak.net",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "i18n",
     "TypeScript",
