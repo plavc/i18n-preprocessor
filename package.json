@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "description": "Internationalization preprocessor for TypeScript.",
-  "main": "index.ts",
+  "main": "./bin/cli",
   "repository": {
     "type": "git",
     "url": "https://github.com/plavc/i18n-preprocessor.git"
@@ -16,13 +16,13 @@
     "Angular"
   ],
   "bin": {
-    "oda-i18n-preprocessor": "./bin/cli"
+    "i18n-preprocessor": "./bin/cli"
   },
   "scripts": {
     "build": "tsc -d",
     "watch": "tsc -w",
     "start": "node dist/cli",
-    "test": "node dist/cli test -d test-out -l de,es"
+    "test": "node dist/cli test -k -d test-out -l de,es"
   },
   "devDependencies": {
     "@types/node": "^11.13.4",
