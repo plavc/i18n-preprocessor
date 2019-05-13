@@ -33,10 +33,11 @@ export class I18NMain {
         this.writter.write(tranlsations, options);
     }
 
-    public generateKeys(sourceFolder: string,) {
+    public generateKeys(sourceFolder: string) {
         const sources = this.preprocessor.findDeclarationFiles(sourceFolder);
-        sources.forEach(s => {
-            new I18NPhraseTransformer().transformAndUpdate(s);
+        sources.forEach((value, name: string) => {
+            new I18NPhraseTransformer(name).transformAndUpdate(value);
         });
     }
+
 }

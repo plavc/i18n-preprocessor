@@ -9,7 +9,7 @@ export class I18NVisitor {
   public readonly options = {
     delimiter: '|',
     keyDelimiter: '.',
-    prefix: 'dat'
+    prefix: ''
   };
 
   constructor(public readonly prefix: string | undefined = undefined) {

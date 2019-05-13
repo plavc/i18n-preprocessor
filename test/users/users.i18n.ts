@@ -1,8 +1,11 @@
 export const TRANSLATIONS = {
-    title: "Users|dat-title",
+    title: "Users|users.title",
     createForm: {
-        name: "Name|dat-createForm-name",
-        surname: "Surname|dat-createForm-surname",
-        gender: "Gender|dat-createForm-gender"
+        name: "Name|users.createForm.name",
+        surname: "Surname|users.createForm.surname",
+        gender: "Gender|users.createForm.gender"
+    },
+    edit: {
+        title: "Edit User|users.edit.title"
     }
 };
