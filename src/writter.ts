@@ -21,7 +21,7 @@ export class I18NWritter {
         });
     }
 
-    public writeBundle(translations: Map<string, any>, language: string, outputFolder: string, options: I18NOptions) {
+    public writeBundle(translations: Map<string, any>, outputFolder: string, language: string, options: I18NOptions) {
         const result: any = {};
 
         const filePath = path.resolve(outputFolder, language + options.outputFilePrefix + options.outputFileSuffix);

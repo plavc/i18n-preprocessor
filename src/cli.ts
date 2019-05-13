@@ -13,15 +13,15 @@ class Cli {
     public run() {
 
         program
-            .name('oda-i18n-preprocessor')
+            .name('i18n-preprocessor')
             .version(require('../package.json').version, '-v, --version')
             .description(require('../package.json').description)
             .arguments('<sourceDir>')
             .option('-d, --outDir <outDir>', 'folder containing files')
             .option('-f, --outFile <outFile>', 'single bundled output, provide containing folder')
-            .option('-k, --keys', 'Generate keys for translations (declaration files).')
+            .option('-k, --keys', 'Generate keys for translations (declaration files: *.i18n.ts).')
             .option('-b, --base-language <baseLanguage>', 'base language, defaults to \'en\'')
-            .option('-l, --languages <languages>', 'list of language codes for translation', this.list)
+            .option('-l, --languages <languages>', 'list of comma separated language codes for translation: \'de,es\'', this.list)
             .action((sourceDir, cmd) => this.action(sourceDir, this))
             .parse(process.argv);
 
@@ -59,7 +59,6 @@ class Cli {
     private list(val: any) {
         return val.split(',');
     }
-      
 }
 
 new Cli().run();
